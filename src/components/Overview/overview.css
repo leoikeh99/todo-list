@@ -1,0 +1,24 @@
+.overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 70px;
+  margin-bottom: 40px;
+}
+
+.overview__header {
+  color: var(--white);
+  font-size: 40px;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+}
+
+.overview__image {
+  width: 25px;
+  height: 25px;
+}
+
+.overview__image img {
+  width: 100%;
+  cursor: pointer;
+}
