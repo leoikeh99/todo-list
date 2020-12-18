@@ -4,41 +4,43 @@ import cross from "../images/icon-cross.svg";
 
 const TodoIitem = ({ todo, setComplete, deleteItem }) => {
   return (
-    <div className="spaceOut">
-      <div
-        onClick={() => setComplete(todo.id)}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          cursor: "pointer",
-        }}
-      >
+    <li key={todo.id} className="todoItem">
+      <div className="spaceOut">
         <div
-          className={`check ${
-            todo.isCompleted ? "activeCheck" : "inactiveCheck"
-          }`}
+          onClick={() => setComplete(todo.id)}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            cursor: "pointer",
+          }}
         >
-          <img src={check} alt="" />
-        </div>
+          <div
+            className={`check ${
+              todo.isCompleted ? "activeCheck" : "inactiveCheck"
+            }`}
+          >
+            <img src={check} alt="" />
+          </div>
 
-        <p className={`${todo.isCompleted ? "complete" : ""}`}>
-          <span className="line_wrap">
-            <span
-              className={`line ${
-                todo.isCompleted ? "activeLine" : "inactiveLine"
-              }`}
-            ></span>
-            {todo.todo}
-          </span>
-        </p>
+          <p className={`${todo.isCompleted ? "complete" : ""}`}>
+            <span className="line_wrap">
+              <span
+                className={`line ${
+                  todo.isCompleted ? "activeLine" : "inactiveLine"
+                }`}
+              ></span>
+              {todo.todo}
+            </span>
+          </p>
+        </div>
+        <img
+          src={cross}
+          alt=""
+          className="cross"
+          onClick={() => deleteItem(todo.id)}
+        />
       </div>
-      <img
-        src={cross}
-        alt=""
-        className="cross"
-        onClick={() => deleteItem(todo.id)}
-      />
-    </div>
+    </li>
   );
 };
 export default TodoIitem;

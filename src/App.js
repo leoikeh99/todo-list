@@ -33,6 +33,12 @@ const App = () => {
 
   const deleteItem = (id) => setTodos(todos.filter((item) => item.id !== id));
 
+  const count = (todos) => {
+    var amount = 0;
+    todos.forEach((todo) => (!todo.isCompleted ? amount++ : (amount += 0)));
+    return amount;
+  };
+
   return (
     <Fragment>
       <div className="container">
@@ -58,7 +64,7 @@ const App = () => {
 
           <div className="bottomTab">
             <ul>
-              <li>5 items left</li>
+              <li>{count(todos)} items left</li>
               <ul>
                 <li
                   className={filter === "all" ? "active" : ""}
@@ -79,9 +85,48 @@ const App = () => {
                   Completed
                 </li>
               </ul>
-              <li>Clear Completed</li>
+              <li
+                onClick={() =>
+                  setTodos(todos.filter((todo) => !todo.isCompleted))
+                }
+              >
+                Clear Completed
+              </li>
             </ul>
           </div>
+        </div>
+        <ul className="mobileTab ">
+          <li
+            className={filter === "all" ? "active" : ""}
+            onClick={() => setFilter("all")}
+          >
+            All
+          </li>
+          <li
+            className={filter === "active" ? "active" : ""}
+            onClick={() => setFilter("active")}
+          >
+            Active
+          </li>
+          <li
+            className={filter === "completed" ? "active" : ""}
+            onClick={() => setFilter("completed")}
+          >
+            Completed
+          </li>
+        </ul>
+        <div className="text-center mb-1">
+          <small>Drag and drop to reorder list</small>
+          <div className="mb-1"></div>
+          <small>
+            <a href="https://www.frontendmentor.io/" target="_blank">
+              Frontendmentor
+            </a>
+            challenge completed by
+            <a href="https://github.com/leoikeh99" target="_blank">
+              @wazza
+            </a>
+          </small>
         </div>
       </div>
     </Fragment>

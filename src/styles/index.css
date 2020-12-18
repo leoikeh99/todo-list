@@ -34,6 +34,12 @@ html[theme="dark"] {
   --box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
 }
 
+a {
+  text-decoration: none;
+  color: var(--active);
+  padding: 0px 4px;
+}
+
 html {
   --white: #fff;
 }
@@ -125,7 +131,7 @@ li {
   background: var(--item-background);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .bottomTab ul {
@@ -142,13 +148,30 @@ li {
   font-weight: bold;
 }
 
-.bottomTab ul ul li.active {
+.bottomTab ul ul li.active,
+ul.mobileTab li.active {
   color: var(--active);
 }
 
-.bottomTab ul li:hover {
+.bottomTab ul li:hover,
+ul.mobileTab li:hover {
   color: var(--hover-color);
   cursor: pointer;
+}
+
+ul.mobileTab li {
+  display: inline-block;
+  padding: 0px 10px;
+  color: var(--text-color2);
+}
+
+ul.mobileTab {
+  text-align: center;
+  padding: 20px 0px;
+  background: var(--item-background);
+  border-radius: 5px;
+  margin-bottom: 30px;
+  display: none;
 }
 
 .check {
@@ -218,4 +241,48 @@ span.line {
 
 .todoItem:hover .cross {
   opacity: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 20px;
+}
+
+small {
+  color: var(--text-color2);
+  text-align: center;
+  width: 100%;
+}
+/* Animation (Add After) */
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+@media (max-width: 520px) {
+  .bottomTab ul ul {
+    display: none;
+  }
+  ul.mobileTab {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .topImage {
+    height: 270px;
+  }
 }
