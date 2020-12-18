@@ -13,18 +13,21 @@ const Todo = ({ todos, setComplete, deleteItem, filter, setTodos }) => {
                 todo={todo}
                 setComplete={setComplete}
                 deleteItem={deleteItem}
+                key={todo.id}
               />
             ) : filter === "completed" && todo.isCompleted ? (
               <TodoItem
                 todo={todo}
                 setComplete={setComplete}
                 deleteItem={deleteItem}
+                key={todo.id}
               />
             ) : filter === "active" && !todo.isCompleted ? (
               <TodoItem
                 todo={todo}
                 setComplete={setComplete}
                 deleteItem={deleteItem}
+                key={todo.id}
               />
             ) : null}
           </Fragment>

@@ -4,19 +4,41 @@ import Todo from "./components/Todo";
 
 const App = () => {
   const [text, setText] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([
+    {
+      todo: "Complete online JavaScript course",
+      isCompleted: false,
+      id: "1",
+    },
+    {
+      todo: "Jog around the park 3x",
+      isCompleted: false,
+      id: "2",
+    },
+    {
+      todo: "10 minutes meditation",
+      isCompleted: false,
+      id: "3",
+    },
+    {
+      todo: "Read for 1 hour",
+      isCompleted: false,
+      id: "4",
+    },
+    {
+      todo: "Complete Todo App on Frontend Mentor",
+      isCompleted: false,
+      id: "5",
+    },
+  ]);
   const [filter, setFilter] = useState("all");
 
   const addItem = (e) => {
     e.preventDefault();
     if (text !== "") {
-      setTodos([
-        ...todos,
-        { todo: text, isCompleted: false, id: +new Date(), show: true },
-      ]);
+      setTodos([...todos, { todo: text, isCompleted: false, id: +new Date() }]);
     }
     setText("");
-    console.log(todos);
   };
 
   const setComplete = (id) => {
