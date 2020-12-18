@@ -20,8 +20,8 @@ Your users should be able to:
 
 ### Light Mode
 
-![todo light mode](/mdimages/todo1)
+![todo light mode](/mdimages/todo1.PNG)
 
 ### Dark Mode
 
-![todo light mode](/mdimages/todo2)
+![todo light mode](/mdimages/todo2.PNG)
