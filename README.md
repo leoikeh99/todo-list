@@ -18,7 +18,9 @@ Your users should be able to:
 - Toggle light and dark mode
 - **Bonus**: Drag and drop to reorder items on the list
 
-[Live Demo](https://reverent-roentgen-7721f6.netlify.app/)
+### Live demo:
+
+[Todo app live](https://reverent-roentgen-7721f6.netlify.app/)
 
 ### Light Mode
 
@@ -30,7 +32,5 @@ Your users should be able to:
 
 ## Development
 
-- Install dependencies
-  `npm install`
-- Run apllication
-  `npm start`
+- Install dependencies `npm install`
+- Run application `npm start`
