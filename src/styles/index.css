@@ -119,6 +119,9 @@ li {
   box-sizing: border-box;
   border-bottom: 1px solid var(--border-color);
 }
+.todoItem p {
+  margin-left: 5px;
+}
 
 .todoItems li:first-child {
   border-top-right-radius: 5px;
@@ -178,7 +181,6 @@ ul.mobileTab {
   height: 22px;
   width: 22px;
   border-radius: 50%;
-  margin-right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,6 +239,7 @@ span.line {
   opacity: 0;
   transition: 0.2s ease-in all;
   cursor: pointer;
+  margin-left: 3px;
 }
 
 .todoItem:hover .cross {
@@ -284,5 +287,8 @@ small {
 @media (max-width: 400px) {
   .topImage {
     height: 270px;
+  }
+  .todoItem .cross {
+    opacity: 1;
   }
 }

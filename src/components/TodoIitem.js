@@ -15,11 +15,17 @@ const TodoIitem = ({ todo, setComplete, deleteItem }) => {
           }}
         >
           <div
-            className={`check ${
-              todo.isCompleted ? "activeCheck" : "inactiveCheck"
-            }`}
+            style={{
+              flexBasis: "5%",
+            }}
           >
-            <img src={check} alt="" />
+            <div
+              className={`check ${
+                todo.isCompleted ? "activeCheck" : "inactiveCheck"
+              }`}
+            >
+              <img src={check} alt="" />
+            </div>
           </div>
 
           <p className={`${todo.isCompleted ? "complete" : ""}`}>
