@@ -1,4 +1,6 @@
-# - Todo app ( Frontend Mentor Challenge)
+# - Todo app with react.js
+
+### Frontend Mentor Challenge
 
 [Frontend Mentor](https://www.frontendmentor.io)
 
@@ -25,3 +27,10 @@ Your users should be able to:
 ### Dark Mode
 
 ![todo light mode](/mdimages/todo2.PNG)
+
+## Development
+
+- Install dependencies
+  `npm install`
+- Run apllication
+  `npm start`
